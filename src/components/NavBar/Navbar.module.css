@@ -9,7 +9,7 @@
   padding-left: 20px;
   padding-right: 20px;
   position: fixed;
-  transition: all 100ms ease-in;
+  transition: all 250ms ease-in-out;
   z-index: 1;
 }
 
