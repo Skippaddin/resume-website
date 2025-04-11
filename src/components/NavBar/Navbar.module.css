@@ -30,9 +30,8 @@
 }
 
 .rightNav {
-  width: 340px;
   display: flex;
-  justify-content: space-between;
+  gap: 25px;
 }
 
 .rightNav a {

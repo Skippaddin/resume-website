@@ -26,7 +26,7 @@ function NavBar() {
   return (
     <>
     <header>
-      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+      <nav className={`${styles.navbar} ${scrolled && styles.scrolled}`}>
         <NavLink className={styles.leftNav} to="/">Martin Asmus</NavLink>
         <div className={styles.rightNav}>
           <NavLink to="/">HOME</NavLink>
