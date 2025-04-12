@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router";
+import { NavLink } from "react-router";
 import styles from './Navbar.module.css';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useTranslation } from "react-i18next";
 
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+
+  const { contextSafe } = useGSAP();
+
+  const { t } = useTranslation(['navigation']);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,14 +30,33 @@ function NavBar() {
     }
   }, [scrolled]);
 
+  const handleProjectsClick = contextSafe((event) => {
+    event.preventDefault();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: '#projects',
+        offsetY: 64
+      },
+    });
+  });
+
+  const handleHomeClick = contextSafe((event) => {
+    event.preventDefault();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 0
+    })
+  });
+
   return (
     <>
     <header>
       <nav className={`${styles.navbar} ${scrolled && styles.scrolled}`}>
-        <NavLink className={styles.leftNav} to="/">Martin Asmus</NavLink>
+        <a onClick={handleHomeClick} className={styles.leftNav}>Martin Asmus</a>
         <div className={styles.rightNav}>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/">PROJEKTE</NavLink>
+          <a onClick={handleHomeClick}>{t('home', {ns: 'navigation'})}</a>
+          <a onClick={handleProjectsClick}>{t('projects', {ns: 'navigation'})}</a>
           <NavLink to="/">LEBENSLAUF</NavLink>
         </div>
       </nav>

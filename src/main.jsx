@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import './locales/i18n';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
 

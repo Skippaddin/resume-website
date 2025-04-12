@@ -7,8 +7,11 @@ import { faSteam, faTwitch } from "@fortawesome/free-brands-svg-icons";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Projects from "../../components/Projects/Projects";
+import { useTranslation } from "react-i18next";
 
 function Homepage() {
+
+  const { t } = useTranslation(['home']);
 
   useGSAP(() => {
     let tl = gsap.timeline({
@@ -30,7 +33,7 @@ function Homepage() {
       <div className={styles.presentation}>
         <img alt="profile picture" src="src\assets\Foto_downscaled.jpg"/>
         <h1>Martin Asmus</h1>
-        <h2>Softwareentwickler mit Leidenschaft</h2>
+        <h2>{t('tagline', {ns: 'home'})}</h2>
         <div className={styles.socials}>
           <IconTooltip link="mailto:masmus@uni-bremen.de" Icon={MailFilled} text="masmus@uni-bremen.de"/>
           <IconTooltip link="https://mobile4d-projekt.de" Icon={ProjectFilled} text="mobile4D"/>
@@ -43,13 +46,13 @@ function Homepage() {
     </div>
     <div className={styles.about__me__container}>
       <div className={styles.about__me}>
-        <p className="about1"><strong>Hallo!</strong></p>
+        <p className="about1"><strong>{t('hello', {ns: 'home'})}</strong></p>
         <p className="about2">Ich bin Martin Asmus und komme aus Bremen.</p>
         <p className="about3">Ich habe eine große Leidenschaft für die Softwareentwicklung und liebe es neue Dinge zu lernen.</p>
         <p className="about4">Kontaktiere mich gerne und schaue dir meine Projekte an.</p>
       </div>
     </div>
-    <div className={styles.headline}>
+    <div id="projects" className={styles.headline}>
       <h1>Projekte</h1>
     </div>
     <Projects/>

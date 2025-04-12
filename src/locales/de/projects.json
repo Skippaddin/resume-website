@@ -1,0 +1,6 @@
+{
+  "webProject": {
+    "header": "Meine Webseite",
+    "text": "Dies war ein kleines Projekt von mir, um meine Projekte zu präsentieren und gleichzeitig zu zeigen, dass ich Webseiten schreiben kann, da ich sonst hauptsächlich im Backend arbeite. Die Webseite wurde mit dem React Framework geschrieben und für die Hintergrundanimationen wurde tsparticles verwendet. Außerdem konnte ich die Tools GSAP für die restlichen Animationen und i18next für die Mehrsprachigkeit kennenlernen."
+  }
+}

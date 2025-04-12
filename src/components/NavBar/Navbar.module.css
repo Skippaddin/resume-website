@@ -13,6 +13,10 @@
   z-index: 1;
 }
 
+.navbar a:hover {
+  cursor: pointer;
+}
+
 .navbar.scrolled {
   background-color: rgba(27, 38, 44, 1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
@@ -40,6 +44,7 @@
   font-size: 1.3rem;
   border-radius: 5px;
   transition: color 100ms;
+  text-transform: uppercase;
 }
 
 .rightNav a:hover {
