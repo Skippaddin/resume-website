@@ -1,6 +1,19 @@
 {
   "webProject": {
     "header": "Meine Webseite",
-    "text": "Dies war ein kleines Projekt von mir, um meine Projekte zu präsentieren und gleichzeitig zu zeigen, dass ich Webseiten schreiben kann, da ich sonst hauptsächlich im Backend arbeite. Die Webseite wurde mit dem React Framework geschrieben und für die Hintergrundanimationen wurde tsparticles verwendet. Außerdem konnte ich die Tools GSAP für die restlichen Animationen und i18next für die Mehrsprachigkeit kennenlernen."
-  }
+    "text": "Diese Website ist nicht nur ein Überblick über meine bisherigen Projekte - sie ist selbst eines. Als hauptsächlich Backend-orientierter Entwickler wollte ich mit dieser Seite zeigen, dass ich auch im Frontend zu Hause bin. Die Seite wurde mit React umgesetzt und verwendet tsparticles für den animierten Hintergrund und GSAP für die sanften Scroll-Animationen. Um die Seite mehrsprachig zu machen, habe ich auch i18next integriert. Ziel war es, eine moderne, performante und interaktive Plattform zu schaffen, auf der ich mich und meine Arbeit authentisch präsentieren kann.",
+    "technologies": {
+      "React": "https://react.dev/",
+      "tsParticles": "https://github.com/tsparticles/tsparticles",
+      "GSAP": "https://gsap.com/",
+      "i18next": "https://www.i18next.com/"
+    }
+  },
+
+  "minecraft": {
+    "header": "Minecraft Server Plugins",
+    "text": "Um meine Java-Kenntnisse aufzufrischen und praxisnah mit Echtzeitanwendungen zu arbeiten, habe ich mehrere Plugins für PaperMC und Spigot entwickelt. Eines dieser Plugins ist eine Umsetzung einer Challenge, inspiriert von einem bekannten YouTuber: Ziel ist es, alle möglichen Items aus Kisten jeder Struktur zu sammeln – aber mit einer besonderen Einschränkung: Items können ausschließlich aus Kisten erlangt werden. Weder das Abbauen von Blöcken noch das Töten von Mobs liefert Loot. Man darf außerdem pro Struktur erst dann zur nächsten übergehen, wenn alle potenziellen Items, die in deren Kisten generiert werden können, gesammelt wurden.<br/><br/>Diese Einschränkungen fordern kreative Herangehensweisen – sowohl vom Spieler als auch von der technischen Umsetzung. Eine besondere Herausforderung war es, zuverlässig zu erkennen, ob eine geöffnete Truhe zu einer bestimmten Struktur gehört, und unberechtigtes Öffnen zu verhindern. Dabei musste ich mit den Limitierungen der API umgehen: Das Öffnen einer Truhe triggert das GenerateLootEvent. In diesem Event kann man anhand eines Keys in der Loottable herausfinden zu welcher Weltstruktur diese Truhe gehört. Dementsprechend war mein erster Ansatz dieses Event abzubrechen. Danach wird das InventoryOpenEvent getriggert, welches ich dann versuchte abzubrechen. Um jedoch zu sehen, ob das Inventar geschlossen werden muss, musste ich auf die Loottable zugreifen, was wiederum das GenerateLootEvent triggerte. Somit hatte ich eine Endlosschleife.<br/><br/>Die Lösung: Ich lasse das Loot generieren, ändere aber beim Erzeugen den Namen eines Items temporär in den Namen der Struktur. Im InventoryOpenEvent kann ich dann prüfen, ob die Kiste zur aktuellen Struktur passt. Falls nicht, wird das Inventar geschlossen. Ist sie korrekt, wird der Itemname wieder zurückgesetzt.<br/>Dieses Projekt hat mir nicht nur geholfen, komplexere Event-Ketten in der Bukkit-API zu meistern, sondern auch mein Verständnis für effiziente und kreative Lösungsansätze innerhalb enger Rahmenbedingungen gestärkt."
+  },
+
+  "technologies": "Technologien"
 }

@@ -9,8 +9,8 @@ function Projects() {
 
   return (
     <div className={styles.projects}>
-      <Card className='card1' color="#1B262C" img="src\assets\react.svg" header={t('webProject.header', {ns: 'projects'})} text={t('webProject.text', {ns: 'projects'})}/>
-      <Card color="#0F4C75"/>
+      <Card color="#e4e4e4" bgColor="#1B262C" img="src\assets\react.svg" header={t('webProject.header', {ns: 'projects'})} text={t('webProject.text', {ns: 'projects'})} tech={t('webProject.technologies', {ns: 'projects', returnObjects: true})}/>
+      <Card color="#f0f0f0" bgColor="#228b22" img="src\assets\All&OnlyChests.webp" header={t('minecraft.header', {ns: 'projects'})} text={t('minecraft.text', {ns: 'projects', returnObjects: true})}/>
     </div>
   );
 }

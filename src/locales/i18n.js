@@ -6,10 +6,6 @@ import navDE from './de/navigation.json';
 import homeDE from './de/home.json';
 import projectsDE from './de/projects.json';
 
-import navEN from './en/navigation.json';
-import homeEN from './en/home.json';
-import projectsEN from './en/projects.json';
-
 i18n
   .use(I18nextBrowserLanguageDetector)
   .use(initReactI18next)
@@ -19,14 +15,9 @@ i18n
         navigation: navDE,
         home: homeDE,
         projects: projectsDE
-      },
-      en: {
-        navigation: navEN,
-        home: homeEN,
-        projects: projectsEN
       }
     },
-    fallbackLng: 'en',
+    fallbackLng: 'de',
     interpolation: {
       escapeValue: false
     }
