@@ -1,43 +1,71 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Card.module.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useTranslation } from "react-i18next";
+import TechLink from "../TechLink/TechLink";
 
-function Card({color, bgColor, img, header, text, tech}) {
+function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor = 'blue', linkHoverColor = 'red'}) {
+
+  const [collapsed, setCollapsed] = useState(true);
 
   const { t } = useTranslation(['projects']);
 
-  const ref = useRef();
+  const cardRef = useRef(null);
 
   useGSAP(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ref.current,
-        start: '30% bottom'
+        trigger: cardRef.current,
+        start: '150px bottom'
       }
     });
   
-    tl.from(ref.current, {x: 200, opacity: 0, duration: 0.8});
+    tl.from(cardRef.current, {x: 200, opacity: 0, duration: 0.8});
+  });
+
+  const { contextSafe } = useGSAP();
+
+  const textRef = useRef(null);
+
+  const handleButtonClick = contextSafe(() => {
+    const text = textRef.current;
+
+    if (collapsed) {
+      gsap.to(text, {maxHeight: text.scrollHeight, duration: 1});
+    } else {
+      gsap.to(text, {maxHeight: 300, duration: 1});
+    }
+
+    setCollapsed(prev => !prev);
   });
 
   return (
-    <div ref={ref} style={{backgroundColor: bgColor}} className={styles.card}>
+    <div ref={cardRef} style={{backgroundColor: bgColor}} className={styles.card}>
       <div className={styles.left}>
         {img && <img src={img}/>}
       </div>
       <div style={{color: color}} className={styles.right}>
-      <h2>{header}</h2>
+        <h2>{header}</h2>
+        <div ref={textRef} className={`${styles.text}`}>
         {text && text.split("<br/>").map((part) => (
           <p>{part}</p>
         ))}
+        </div>
+        {showCollapser && (
+          <div className={styles.collapser}>
+          <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
+          <div onClick={handleButtonClick} className={styles.cButton}>
+            <p>{collapsed ? t('show', {ns: 'projects'}): t('hide', {ns: 'projects'})}</p>
+          </div>
+          <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
+        </div>
+        )}
         {tech && 
         <div className={styles.tech}>
           <p>{t('technologies', {ns: 'projects'})}:</p>
           {Object.entries(tech).map(([name, url]) => (
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {name}
-            </a>
+            <TechLink href={url} children={name} defaultColor={linkColor} hoverColor={linkHoverColor}/>
           ))}
         </div>}
       </div>

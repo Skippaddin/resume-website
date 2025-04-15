@@ -57,7 +57,6 @@ function NavBar() {
         <div className={styles.rightNav}>
           <a onClick={handleHomeClick}>{t('home', {ns: 'navigation'})}</a>
           <a onClick={handleProjectsClick}>{t('projects', {ns: 'navigation'})}</a>
-          <NavLink to="/">LEBENSLAUF</NavLink>
         </div>
       </nav>
     </header>
