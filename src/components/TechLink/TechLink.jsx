@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from './TechLink.module.css';
 
 function TechLink({href, children, defaultColor = 'blue', hoverColor = 'red'}) {
   const [hovered, setHovered] = useState(false);

@@ -21,6 +21,31 @@
     }
   },
 
+  "bachelorThesis": {
+    "header": "Bachelorarbeit - Auditive Aufmerksamkeitsverfolgung kontinuierlich bewegender Tonquellen anhand von EEG-Signalen mit KI",
+    "text": "In meiner <strong>Bachelorarbeit</strong> habe ich untersucht, wie sich die Position einer sich kontinuierlich bewegenden Tonquelle – also der horizontale Winkel – anhand von EEG-Daten (Gehirnwellensignale) bestimmen lässt. Die Versuchspersonen konzentrierten sich dabei auf eine akustische Repräsentation einer summenden Biene, die sich vor ihnen im Raum bewegte.<br/><br/>Zur Analyse habe ich bestehende neuronale Netzwerke, insbesondere EEGNet und ShallowNet, an die Aufgabenstellung angepasst und um zusätzliche Komponenten erweitert. Die Modelle wurden mit PyTorch trainiert und mittels TensorBoard überwacht. Für die Auswertung und Visualisierung der Ergebnisse kam Seaborn zum Einsatz.<br/><br/>Ich verfolgte sowohl klassifikationsbasierte Ansätze, bei denen die horizontalen Winkel in Kategorien eingeteilt wurden, als auch regressionsbasierte Verfahren, die kontinuierliche Vorhersagen ermöglichen. Obwohl die Regression interessante Tendenzen zeigte, lieferten Klassifikationsmodelle insgesamt robustere und genauere Ergebnisse. Besonders effektiv war die Erweiterung der Modelle durch LSTM-Schichten, mit denen sich die zeitliche Struktur der EEG-Signale besser nutzen ließ.<br/><br/>Die Arbeit wurde mit der Note 1,3 bewertet. Die Erkenntnisse tragen zur aktuellen Forschung im Bereich der auditiven Wahrnehmung bei – mit dem langfristigen Ziel, unter anderem intelligentere und kontextbewusstere Hörgeräte zu entwickeln, die auf Gehirnsignale reagieren können.",
+    "technologies": {
+      "PyTorch": "https://pytorch.org/",
+      "TensorBoard": "https://www.tensorflow.org/tensorboard",
+      "seaborn": "https://seaborn.pydata.org/"
+    }
+  },
+
+  "bachelorProject": {
+    "header": "Bachelorprojekt - ePro",
+    "text": "Im Rahmen meines Bachelorprojekts arbeitete ich in einer Projektgruppe an „ePro“, einer Webanwendung zur Planung und Durchführung klinischer Studien. Das Projekt war eines von mehreren Teilprojekten innerhalb des Bachelorprojekts, die alle im Gesundheitsbereich angesiedelt waren. Zwischen den Gruppen fand regelmäßiger Wissensaustausch statt, wodurch interdisziplinäre Lösungen und technische Unterstützung möglich wurden.<br/><br/>Ziel unseres Projekts war die Entwicklung einer Plattform, über die sich Studien effizient verwalten und digital durchführen lassen. Das System bestand aus zwei zentralen Komponenten: <ul><li>Einer Webanwendung für das Studienpersonal, in der man Teilnehmer verwalten, Studien anlegen, sowie Fragebögen mit einem flexiblen Baukastensystem erstellen konnte. Dieses unterstützte verschiedene Fragetypen wie Single-Choice, Multiple-Choice, Skalen, numerische Eingaben mit Min/Max, sowie Bild-Uploads.</li><br/><li>Einer mobilen App für Studienteilnehmer, über die die Umfragen beantwortet werden konnten. Fragebögen wurden automatisch als Templates gespeichert, um sie in anderen Studien wiederverwenden oder anpassen zu können.</li></ul><strong>Meine Rolle im Projekt:</strong><br/>Ich war verantwortlich für den technischen Grundaufbau und das Backend des Projekts:<ul><li>Aufsetzen der Systemarchitektur mit PostgreSQL, Redis und Celery zur Ausführung von Hintergrund- und periodischen Tasks</li><br/><li>Entwicklung des Backends mit Django, inkl.:</li><ul><li>REST-APIs für Web-Frontend und App</li><li>Websockets zur Echtzeitkommunikation</li><li>CSV-Import/-Export</li><li>Push-Benachrichtigungen</li></ul><br/><li>Containerisierung des gesamten Projekts mit Docker</li><li>Websockets zur Echtzeitkommunikation</li><li>Mitarbeit an kleineren Komponenten im Frontend (Vue.js) sowie der Flutter-App</li><li>Technischer Ansprechpartner im Team bei Architektur- und Implementierungsfragen</li></ul>Zusätzlich unterstützte ich eine andere Gruppe bei der Backend-Entwicklung einer App, die mithilfe von KI eine Einschätzung für Dengue-Fieber anhand medizinischer Daten liefert.<br/><br/>Das Projekt wurde mit der Note 1,0 bewertet und bot mir die Möglichkeit, meine Fähigkeiten im Bereich Backend-Entwicklung, DevOps und Teamkommunikation in einem praxisnahen medizinischen Anwendungskontext weiterzuentwickeln.",
+    "technologies": {
+      "Django": "https://www.djangoproject.com/",
+      "PosgreSQL": "https://www.postgresql.org/",
+      "Redis": "https://redis.io/",
+      "Celery": "https://docs.celeryq.dev",
+      "Docker": "https://www.docker.com/",
+      "Vue.js": "https://vuejs.org/",
+      "nginx": "https://nginx.org/",
+      "Firebase": "https://firebase.google.com/"
+    }
+  },
+
   "technologies": "Technologien",
   "show": "mehr anzeigen",
   "hide": "weniger anzeigen"

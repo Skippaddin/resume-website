@@ -15,7 +15,7 @@
 .left {
   width: 20%;
   min-width: 120px;
-  border-right: 1px solid var(--font-color);
+  border-right: 1px solid;
   display: flex;
   justify-content: center;
 }
@@ -45,13 +45,14 @@
 
 .right h2 {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: 600;
   font-family: Nunito, Roboto, Helvetica, Arial, sans-serif;
 }
 
 .collapser {
-  margin-top: 10px;
+  margin: 20px 0px;
   height: 20px;
   display: flex;
   align-items: center;
