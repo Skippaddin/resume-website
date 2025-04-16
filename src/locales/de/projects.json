@@ -46,6 +46,17 @@
     }
   },
 
+  "gradeBook": {
+    "header": "Studierendenverwaltung – Webanwendung für Dozierende und Tutor:innen",
+    "text": "Im Rahmen eines Gruppenprojekts an der Hochschule entwickelten wir eine Webanwendung zur Verwaltung von Studierenden, Veranstaltungen und Leistungserhebungen. Die Anwendung richtete sich an Dozierende und Tutor:innen, die damit Veranstaltungen organisieren, Studierende strukturieren und Leistungen erfassen konnten. Studierende selbst hatten keinen Zugriff auf das System.<br/><br>Die Anwendung wurde vollständig in Java EE entwickelt. Für das Frontend kamen JSF in Kombination mit PrimeFaces zum Einsatz. Als Architektur nutzten wir das MVC-Modell, mit Hibernate als ORM und WildFly als Applikationsserver.<br/><br/><strong>Hauptfunktionen der Anwendung:</strong><ul><li>Veranstaltungsmanagement: Anlegen und Verwalten von Lehrveranstaltungen, Zuweisung von Studierenden</li><br/><li>Tutorienverwaltung: Erstellung und Verwaltung von Tutorien mit zugeordneten Tutor:innen und Studierendengruppen</li><br/><li>Aufgabenblätter: Erstellung von Übungsblättern mit gewichteten Aufgaben, inklusive Bewertungskriterien und Bestehensregeln (z. B. mindestens 50 % korrekt, n–1 Regel)</li><br/><li>Leistungsübersicht: Automatische Berechnung von Gesamtnoten unter Berücksichtigung individueller Gewichtungen von Aufgabenblättern und Prüfungen</li><br/><li>Gruppenverwaltung: Zuweisung und Verwaltung von Studierendengruppen innerhalb von Tutorien für Gruppenaufgaben</li></ul><strong>Mein Beitrag:</strong><br/>Ich war in mehreren Kernbereichen der Anwendung aktiv:<ul><li>Implementierung von:</li><ul><li>Gruppenverwaltung</li><li>Veranstaltungserstellung</li><li>Aufgabenblatterstellung und -konfiguration (inkl. Gewichtung und Regeln)</li><li>Benutzeranlage und Bearbeitung von Studierenden</li></ul><ul></ul><br/><li>Leistungsberechnung:</li><ul><li>Komplette Umsetzung der Notenberechnung auf Basis gewichteter Aufgabenblätter und Prüfungen</li></ul><br/><li>Datenbankinteraktion:</li><ul><li>Erstellung zahlreicher SQL-Queries für nahezu alle funktionalen Bereiche</li></ul><br/><li>Architekturdokumentation:</li><ul><li>Mitarbeit an einer umfangreichen technischen Dokumentation, inkl.:</li><ul><li>Einflussfaktoren und Problemstellungen</li><li>Konzeptuelle und modulare Sicht (inkl. Klassendiagrammen)</li><li>Datensicht, Sequenzdiagrammen</li><li>Benutzeranleitung und Deploymentbeschreibung</li></ul></ul></ul>Das Projekt bot mir die Möglichkeit, tief in Java-Enterprise-Technologien einzusteigen, systematisch komplexe Anforderungen umzusetzen und dabei auch Softwarearchitektur in einem realistischen Szenario zu modellieren und dokumentieren.",
+    "technologies": {
+      "Java EE": "https://www.oracle.com/de/java/technologies/java-ee-glance.html",
+      "Hibernate": "https://hibernate.org/",
+      "PrimeFaces": "https://www.primefaces.org/",
+      "WildFly": "https://www.wildfly.org/"
+    }
+  },
+
   "technologies": "Technologien",
   "show": "mehr anzeigen",
   "hide": "weniger anzeigen"

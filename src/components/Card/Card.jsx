@@ -55,7 +55,7 @@ function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor
           <div className={styles.collapser}>
           <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
           <div onClick={handleButtonClick} className={styles.cButton}>
-            <p>{collapsed ? t('show', {ns: 'projects'}): t('hide', {ns: 'projects'})}</p>
+            <p style={{color: linkColor}}>{collapsed ? t('show', {ns: 'projects'}): t('hide', {ns: 'projects'})}</p>
           </div>
           <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
         </div>

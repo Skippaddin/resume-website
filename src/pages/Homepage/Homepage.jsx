@@ -37,7 +37,7 @@ function Homepage() {
         <div className={styles.socials}>
           <IconTooltip link="mailto:masmus@uni-bremen.de" Icon={MailFilled} text="masmus@uni-bremen.de"/>
           <IconTooltip link="https://mobile4d-projekt.de" Icon={ProjectFilled} text="mobile4D"/>
-          <IconTooltip link="https://discord.gg/Zf5zuKq7" Icon={DiscordFilled} text="Skippaddin"/>
+          <IconTooltip link="https://discord.gg/HDnTtScu" Icon={DiscordFilled} text="Skippaddin"/>
           <IconTooltip link="https://github.com/Skippaddin" Icon={GithubFilled} text="Skippaddin"/>
           <IconTooltip link="https://steamcommunity.com/id/Skippaddin/" Icon={FontAwesomeIcon} text="Skippaddin" awesome={faSteam}/>
           <IconTooltip link="https://www.twitch.tv/skippaddin" Icon={FontAwesomeIcon} text="Skippaddin" awesome={faTwitch}/>

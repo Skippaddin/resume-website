@@ -3,6 +3,7 @@ import NavBar from "../NavBar/Navbar";
 import { Outlet } from "react-router";
 import styles from "./Layout.module.css";
 import Canvas from "../Canvas/Canvas";
+import Footer from "../Footer/Footer";
 
 function Layout() {
   return (
@@ -12,6 +13,7 @@ function Layout() {
       <Canvas/>
     </div>
     <Outlet/>
+    <Footer/>
     </>
   );
 }
