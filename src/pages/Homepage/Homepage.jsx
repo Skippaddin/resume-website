@@ -31,7 +31,7 @@ function Homepage() {
     <>
     <div className={styles.container}>
       <div className={styles.presentation}>
-        <img alt="profile picture" src="public\Foto_downscaled.jpg"/>
+        <img alt="profile picture" src="assets\Foto_downscaled.jpg"/>
         <h1>Martin Asmus</h1>
         <h2>{t('tagline', {ns: 'home'})}</h2>
         <div className={styles.socials}>
