@@ -6,19 +6,19 @@
 */
 
 .card {
+  margin-top: 50px;
   width: 100%;
   max-width: 1280px;
-  margin-top: 50px;
   border-radius: 20px;
   /*display: grid;
   grid-template-columns: minmax(150px, 200px) minmax(300px, 1180px);
   grid-template-rows: 1fr 4fr;*/
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 5px rgba(0,0,0,0); 
   box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 5px rgba(0,0,0,0);
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .left {
@@ -48,7 +48,8 @@
 .text {
   overflow: hidden;
   padding: 0;
-  max-height: 300px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .right p {
@@ -142,4 +143,10 @@
 
 .tech a:last-child::after {
   content: "";
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+    display: none;
+  }
 }

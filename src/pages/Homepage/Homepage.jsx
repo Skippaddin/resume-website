@@ -17,7 +17,7 @@ function Homepage() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: `.${styles.about__me}`,
-        start: '50% bottom'
+        start: '30% bottom'
       }
     });
 

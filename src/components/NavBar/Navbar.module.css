@@ -75,3 +75,9 @@
 .rightNav a:hover {
   color: rgb(210, 210, 210);
 }
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+}

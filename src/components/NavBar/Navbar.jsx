@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router";
 import styles from './Navbar.module.css';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

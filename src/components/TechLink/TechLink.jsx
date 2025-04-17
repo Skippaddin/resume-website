@@ -5,7 +5,8 @@ function TechLink({href, children, defaultColor = 'blue', hoverColor = 'red'}) {
 
   const inlineStyles = {
     color: hovered ? hoverColor : defaultColor,
-    textDecoration: 'none'
+    textDecoration: 'none',
+    transition: 'color 250ms ease'
   }
 
   return (

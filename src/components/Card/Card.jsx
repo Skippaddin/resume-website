@@ -1,11 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Card.module.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Trans, useTranslation } from "react-i18next";
 import TechLink from "../TechLink/TechLink";
 
-function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor = 'blue', linkHoverColor = 'red'}) {
+function Card({color, secondaryColor, bgColor, img, header, text, tech, linkColor = 'blue', linkHoverColor = 'red'}) {
+
+  const [showCollapser, setShowCollapser] = useState(false);
+
+  const [maxHeight, setMaxHeight] = useState(300);
 
   const [collapsed, setCollapsed] = useState(true);
 
@@ -13,11 +17,39 @@ function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor
 
   const cardRef = useRef(null);
 
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (textRef.current.scrollHeight > 300) {
+      setShowCollapser(true);
+    }
+
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      let scrollHeight = textRef.current.scrollHeight;
+      if (!collapsed) {
+        setMaxHeight(scrollHeight);
+      }
+      if (scrollHeight > 300) {
+        setShowCollapser(true);
+      } else {
+        setShowCollapser(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+  }, [collapsed]);
+
   useGSAP(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: cardRef.current,
-        start: '150px bottom'
+        trigger: cardRef.current
       }
     });
   
@@ -26,7 +58,6 @@ function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor
 
   const { contextSafe } = useGSAP();
 
-  const textRef = useRef(null);
 
   const handleButtonClick = contextSafe(() => {
     const text = textRef.current;
@@ -41,13 +72,13 @@ function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor
   });
 
   return (
-    <div ref={cardRef} style={{backgroundColor: bgColor}} className={styles.card}>
+      <div ref={cardRef} style={{backgroundColor: bgColor}} className={styles.card}>
       <div style={{borderRightColor: color}} className={styles.left}>
         {img && <img src={img}/>}
       </div>
       <div style={{color: color}} className={styles.right}>
         <h2>{header}</h2>
-        <div ref={textRef} className={`${styles.text}`}>
+        <div style={{maxHeight: maxHeight}} ref={textRef} className={`${styles.text}`}>
           {text &&
           <Trans i18nKey={text} components={{ul: <ul></ul>, li: <li></li>}}/>}
         </div>
@@ -55,7 +86,7 @@ function Card({color, bgColor, img, header, text, tech, showCollapser, linkColor
           <div className={styles.collapser}>
           <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
           <div onClick={handleButtonClick} className={styles.cButton}>
-            <p style={{color: linkColor}}>{collapsed ? t('show', {ns: 'projects'}): t('hide', {ns: 'projects'})}</p>
+            <p style={{color: secondaryColor}}>{collapsed ? t('show', {ns: 'projects'}): t('hide', {ns: 'projects'})}</p>
           </div>
           <div style={{borderBottom: `1px solid ${color}`}} className={styles.line}></div>
         </div>
