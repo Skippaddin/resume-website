@@ -1,0 +1,47 @@
+{
+  "webProject": {
+    "technologies": {
+      "React": "https://react.dev/",
+      "tsParticles": "https://github.com/tsparticles/tsparticles",
+      "GSAP": "https://gsap.com/",
+      "i18next": "https://www.i18next.com/"
+    }
+  },
+
+  "minecraft": {
+    "technologies": {
+      "PaperMC": "https://papermc.io/",
+      "Spigot": "https://www.spigotmc.org/"
+    }
+  },
+
+  "bachelorThesis": {
+    "technologies": {
+      "PyTorch": "https://pytorch.org/",
+      "TensorBoard": "https://www.tensorflow.org/tensorboard",
+      "seaborn": "https://seaborn.pydata.org/"
+    }
+  },
+
+  "bachelorProject": {
+    "technologies": {
+      "Django": "https://www.djangoproject.com/",
+      "PosgreSQL": "https://www.postgresql.org/",
+      "Redis": "https://redis.io/",
+      "Celery": "https://docs.celeryq.dev",
+      "Docker": "https://www.docker.com/",
+      "Vue.js": "https://vuejs.org/",
+      "nginx": "https://nginx.org/",
+      "Firebase": "https://firebase.google.com/"
+    }
+  },
+
+  "gradeBook": {
+    "technologies": {
+      "Java EE": "https://www.oracle.com/de/java/technologies/java-ee-glance.html",
+      "Hibernate": "https://hibernate.org/",
+      "PrimeFaces": "https://www.primefaces.org/",
+      "WildFly": "https://www.wildfly.org/"
+    }
+  }
+}

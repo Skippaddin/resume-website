@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { Trans, useTranslation } from "react-i18next";
 import TechLink from "../TechLink/TechLink";
 
-function Card({color, secondaryColor, bgColor, img, header, text, tech, linkColor = 'blue', linkHoverColor = 'red'}) {
+function Card({color, secondaryColor, bgColor, img, header, text, tech, more, linkColor = 'blue', linkHoverColor = 'red'}) {
 
   const [showCollapser, setShowCollapser] = useState(false);
 
@@ -97,7 +97,16 @@ function Card({color, secondaryColor, bgColor, img, header, text, tech, linkColo
           {Object.entries(tech).map(([name, url]) => (
             <TechLink href={url} children={name} defaultColor={linkColor} hoverColor={linkHoverColor}/>
           ))}
-        </div>}
+        </div>
+        }
+        {more && 
+        <div className={styles.tech}>
+          <p>{t('more', {ns: 'projects'})}:</p>
+          {Object.entries(more).map(([name, url]) => (
+            <TechLink href={url} children={name} defaultColor={linkColor} hoverColor={linkHoverColor}/>
+          ))}
+        </div>
+        }
       </div>
     </div>
   );
