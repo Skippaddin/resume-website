@@ -149,4 +149,8 @@
   .left {
     display: none;
   }
+
+  .right {
+    width: 100%;
+  }
 }
